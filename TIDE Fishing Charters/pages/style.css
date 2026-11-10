@@ -1,0 +1,657 @@
+@font-face {
+    font-family: "barlow";
+    src: url(../fonts/barlow/./Barlow-Regular.ttf); 
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Mulish";
+    src: url(../fonts/Mulish/Mulish-Regular.ttf);
+}
+
+
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img, svg {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+body{
+    font-family:"barlow";
+    line-height: 1.4;
+    color: #141414;
+    background: #f7f7f7;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 6% 100px 6%;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo svg {
+    flex-shrink: 0;
+}
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+.logo-text strong{
+    font-family: "Mulish";
+    font-size: 35px;
+    font-weight: 400;
+}
+.logo-text span {
+    font-size: 1.3rem;
+}
+nav ul {
+    display: flex;
+    gap: clamp(24px, 5vw, 98px);
+}
+nav a {
+    font-size: 1.3rem;
+    white-space: nowrap;
+}
+nav a:hover {
+    opacity: 0.6;
+}
+.login {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    white-space: nowrap;
+}
+.hero {
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(../images/0b340f_1a2676c30ecc4ccab2ee62ce71ba96af~mv2.jpg) right top / cover no-repeat;
+    z-index: -1;
+}
+.hero-content {
+    padding-left: 10%;
+}
+.hero h1 {
+    font-family: "Mulish";
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 550;
+    line-height: 1;
+}
+.hero p {
+    max-width: 500px;
+    margin-top: 40px;
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+.arrow {
+    margin-top: 50px;
+}
+.btn {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 18px 48px;
+    background: #141414;
+    color: #fff;
+    font-size: 1.4rem;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #444;
+    color: black;
+    background-color: #f7f7f7;
+}
+.experience{
+    padding: 50px 6%
+}
+.experience-text{
+    max-width: 600px;
+    margin: 18%;
+}
+.experience h2{
+    font-family: "Mulish";
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+.experience p{
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 38px;
+    margin-top: 20px;
+}
+ .gallery img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+.gallery h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+}
+.adventure{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;  
+    align-items: center;
+    gap: 40px;
+    margin: 0 6%;
+    padding: 100px 0;
+    border-top: 1px solid #999; 
+}
+.adventure-text{
+    max-width: 560px;
+}
+.adventure h2 {
+    font-family: "Mulish";
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+.adventure p{
+    margin-top: 40px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.btn-outline {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 18px 28px;
+    border: 1px solid #141414;
+    font-size: 1.3rem;
+}
+.btn-outline:hover{
+    color: white;
+    background-color: black;
+    transition: background 0.3s;
+}
+.loved-by {
+    position: relative;
+    isolation: isolate;
+    padding: 150px 6%;
+    text-align: center;
+    background: #fff;
+}
+.loved-by::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/0b340f_0d1ab852ddde4f09a1e244c2aa3c37a0~mv2\ \(1\).avif") center / cover no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+}
+.loved-by h2 {
+    font-family: "Mulish";
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+.loved-by blockquote {
+    max-width: 600px;
+    margin: 80px auto 0;
+}
+.loved-by p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.loved-by cite {
+    display: block;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.loved-by input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.slide {
+    display: none;
+}
+#t1:checked ~ .slides .s1,
+#t2:checked ~ .slides .s2,
+#t3:checked ~ .slides .s3 {
+    display: block;
+    animation: fade 0.5s;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+.dots label {
+    width: 26px;
+    height: 26px;
+    padding: 8px;
+    background: #b5b5b5;
+    background-clip: content-box;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#t1:checked ~ .dots label:nth-child(1),
+#t2:checked ~ .dots label:nth-child(2),
+#t3:checked ~ .dots label:nth-child(3) {
+    background: #141414;
+    background-clip: content-box;
+}
+.reports {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 35px 5%;
+    margin-top: 50px;
+}
+.reports-img {
+    width: 100%;
+    aspect-ratio: 922 / 731;
+    object-fit: cover;
+}
+.reports h2 {
+    font-family: "Mulish";
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+.reports p {
+    max-width: 340px;
+    margin-top: 50px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+.reports .btn-outline {
+    margin-top: 40px;
+}
+.footer {
+    padding: 70px 5% 20px;
+}
+.footer-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 60px 90px;
+    background: #fff;
+}
+.footer h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 2rem;
+}
+.footer-logo svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+.footer-logo strong {
+    font-family: "Mulish";
+    font-weight: 400;
+}
+.footer-sub {
+    margin: 14px 0 0 42px;
+    font-size: 1.1rem;
+}
+.socials {
+    display: flex;
+    gap: 22px;
+    margin: 16px 0 60px 42px;
+}
+.footer-info h3 {
+    margin-left: 42px;
+}
+.footer-info p:not(.footer-sub) {
+    margin: 18px 0 0 42px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.footer-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 14px;
+    align-content: start;
+}
+.footer-form h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+    font-size: 1.4rem;
+}
+.full {
+    grid-column: 1 / -1;
+}
+.field label {
+    display: block;
+    font-size: 0.95rem;
+}
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 6px 0;
+    border: none;
+    border-bottom: 1px solid #777;
+    border-radius: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+.field input:focus,
+.field textarea:focus {
+    border-bottom-color: #141414;
+}
+.check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+.footer-form button {
+    padding: 14px;
+    border: 1px solid #777;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.footer-form button:hover {
+    background: #141414;
+    color: #fff;
+}
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 28px;
+    padding-left: 60px;
+}
+.footer-nav a {
+    font-size: 1.6rem;
+    transition: opacity 0.2s;
+}
+.footer-nav a:hover {
+    opacity: 0.6;
+}
+.copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.hero-content svg{
+    margin-top: 40px;
+    width: 60px;
+    height: 19px;
+}
+.experience-text svg{
+    margin-top: 40px;
+    width: 94px;
+    height: 18px;
+}
+.adventure-text svg{
+    margin-top: 40px;
+    width: 94px;
+    height: 18px;
+}
+.loved-by svg{
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    width: 94px;
+    height: 18px;
+}
+.reports svg{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 94px;
+    height: 18px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.menu-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.burger {
+    display: none;
+}
+@media (max-width: 1200px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 24px 5% 40px;
+    }
+    .logo {
+        order: 1;
+        margin-right: auto;
+    }
+    .login {
+        order: 2;
+        position: relative;
+        z-index: 30;
+    }
+    .burger {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        position: relative;
+        z-index: 30;
+    }
+    .burger span {
+        height: 2px;
+        background: #141414;
+        transition: transform 0.25s, opacity 0.2s;
+    }
+    .menu-toggle:checked ~ .burger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle:checked ~ .burger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .burger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav {
+        display: none;
+    }
+    .menu-toggle:checked ~ nav {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        padding-top: 90px;
+        background: #fff;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+    }
+    nav a {
+        display: block;
+        padding: 26px 0;
+        font-size: 1.6rem;
+        text-align: center;
+        border: none;
+    }
+    header:has(.menu-toggle:checked) .logo {
+        display: none;
+    }
+    .menu-toggle:checked ~ .login {
+        margin: 0 auto;
+    }
+    body:has(.menu-toggle:checked) {
+        overflow: hidden;
+    }
+    .login {
+        display: none;
+    }
+    .menu-toggle:checked ~ .login {
+        display: flex;
+        margin: 0 auto;
+    }
+}
+ @media (max-width: 1000px) {
+    .experience-text {
+        margin-left: 8%;
+        width: auto;
+        max-width: 600px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .adventure,
+    .reports {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .adventure {
+        padding: 60px 0;
+    }
+    .loved-by {
+        padding: 80px 6%;
+    }
+    .footer-box {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+    .footer-nav ul {
+        padding-left: 0;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        padding: 16px 5% 24px;
+    }
+    .logo svg {
+        width: 44px;
+        height: 44px;
+    }
+    .logo-text strong {
+        font-size: 1.4rem;
+    }
+    .logo-text span {
+        font-size: 0.85rem;
+    }
+    .hero {
+        min-height: 560px;
+        align-items: flex-end;
+        padding-bottom: 50px;
+    }
+    .hero-content {
+        padding: 0 6%;
+    }
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+    .hero p {
+        margin-top: 24px;
+        font-size: 1.1rem;
+    }
+    .hero-content .arrow {
+        width: 70px;
+        margin-top: 30px;
+    }
+    .btn {
+        margin-top: 30px;
+        padding: 14px 36px;
+        font-size: 1.1rem;
+    }
+    .experience {
+        padding: 50px 6%;
+    }
+    .experience-text {
+        margin-left: 0;
+    }
+    .experience h2 {
+        font-size: 1.6rem;
+    }
+    .experience p {
+        font-size: 1.1rem;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-top: 50px;
+    }
+    .gallery h3 {
+        margin-top: 20px;
+        font-size: 1.4rem;
+    }
+    .footer-box {
+        padding: 30px 20px;
+    }
+
+    .footer-form {
+        grid-template-columns: 1fr;
+    }
+    .chat {
+        right: 16px;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+
+
+

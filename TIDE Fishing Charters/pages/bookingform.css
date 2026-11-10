@@ -1,0 +1,460 @@
+@font-face {
+    font-family: "barlow";
+    src: url(../fonts/barlow/./Barlow-Regular.ttf); 
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Mulish";
+    src: url(../fonts/Mulish/Mulish-Regular.ttf);
+}
+
+
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img, svg {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+body{
+    font-family:"barlow";
+    line-height: 1.4;
+    color: #141414;
+    background: #f7f7f7;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 6% 100px 6%;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo svg {
+    flex-shrink: 0;
+}
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+.logo-text strong{
+    font-family: "Mulish";
+    font-size: 35px;
+    font-weight: 400;
+}
+.logo-text span {
+    font-size: 1.3rem;
+}
+nav ul {
+    display: flex;
+    gap: clamp(24px, 5vw, 98px);
+}
+nav a {
+    font-size: 1.3rem;
+    white-space: nowrap;
+}
+nav a:hover {
+    opacity: 0.6;
+}
+.login {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    white-space: nowrap;
+}
+header {
+    padding-bottom: 50px;
+}
+.booking-form-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 5% 100px;
+}
+.booking-form-page h1 {
+    margin-top: 50px;
+    font-size: clamp(2rem, 2.4vw, 2.4rem);
+    font-weight: 400;
+}
+.booking-layout {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-top: 50px;
+}
+.account {
+    padding: 18px 12px;
+    background: #ececec;
+    font-size: 0.9rem;
+}
+.account a {
+    font-weight: 500;
+    text-decoration: underline;
+}
+.client h2,
+.summary h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.client h2 {
+    margin-top: 30px;
+}
+.fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 20px;
+    margin-top: 34px;
+}
+.full {
+    grid-column: 1 / -1;
+}
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+.field input,
+.field textarea,
+.phone {
+    width: 100%;
+    border: 1px solid #777;
+    border-radius: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+.field input,
+.field textarea {
+    padding: 9px 11px;
+}
+.field textarea {
+    resize: vertical;
+}
+.phone {
+    display: flex;
+    align-items: center;
+}
+.phone select {
+    padding: 9px 4px 9px 8px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+.phone input {
+    flex: 1;
+    border: none;
+}
+.field input:focus,
+.field textarea:focus,
+.phone:focus-within {
+    outline: 1px solid #141414;
+}
+.svc {
+    margin-top: 34px;
+    font-size: 0.95rem;
+}
+.when {
+    margin-top: 6px;
+    font-size: 0.95rem;
+}
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: #555;
+}
+.summary h3 {
+    margin-top: 36px;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+.book {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    padding: 12px;
+    border: none;
+    background: #141414;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.book:hover {
+    background: #444;
+}
+.footer {
+    padding: 70px 5% 20px;
+}
+.footer-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 60px 90px;
+    background: #fff;
+}
+.footer h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 2rem;
+}
+.footer-logo svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+.footer-logo strong {
+    font-family: "Mulish";
+    font-weight: 400;
+}
+.footer-sub {
+    margin: 14px 0 0 42px;
+    font-size: 1.1rem;
+}
+.socials {
+    display: flex;
+    gap: 22px;
+    margin: 16px 0 60px 42px;
+}
+.footer-info h3 {
+    margin-left: 42px;
+}
+.footer-info p:not(.footer-sub) {
+    margin: 18px 0 0 42px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.footer-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 14px;
+    align-content: start;
+}
+.footer-form h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+    font-size: 1.4rem;
+}
+.full {
+    grid-column: 1 / -1;
+}
+.field label {
+    display: block;
+    font-size: 0.95rem;
+}
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 6px 0;
+    border: none;
+    border-bottom: 1px solid #777;
+    border-radius: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+.field input:focus,
+.field textarea:focus {
+    border-bottom-color: #141414;
+}
+.check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+.footer-form button {
+    padding: 14px;
+    border: 1px solid #777;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.footer-form button:hover {
+    background: #141414;
+    color: #fff;
+}
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 28px;
+    padding-left: 60px;
+}
+.footer-nav a {
+    font-size: 1.6rem;
+    transition: opacity 0.2s;
+}
+.footer-nav a:hover {
+    opacity: 0.6;
+}
+.copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.menu-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.burger {
+    display: none;
+}
+@media (max-width: 1200px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 24px 5% 40px;
+    }
+    .logo {
+        order: 1;
+        margin-right: auto;
+    }
+    .login {
+        order: 2;
+        position: relative;
+        z-index: 30;
+    }
+    .burger {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        position: relative;
+        z-index: 30;
+    }
+    .burger span {
+        height: 2px;
+        background: #141414;
+        transition: transform 0.25s, opacity 0.2s;
+    }
+    .menu-toggle:checked ~ .burger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle:checked ~ .burger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .burger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav {
+        display: none;
+    }
+    .menu-toggle:checked ~ nav {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        padding-top: 90px;
+        background: #fff;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+    }
+    nav a {
+        display: block;
+        padding: 26px 0;
+        font-size: 1.6rem;
+        text-align: center;
+        border: none;
+    }
+    header:has(.menu-toggle:checked) .logo {
+        display: none;
+    }
+    .menu-toggle:checked ~ .login {
+        margin: 0 auto;
+    }
+    body:has(.menu-toggle:checked) {
+        overflow: hidden;
+    }
+    .login {
+        display: none;
+    }
+    .menu-toggle:checked ~ .login {
+        display: flex;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 800px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .booking-form-page {
+    padding: 20px 20px 60px;
+  }
+  .booking-form-page h1 {
+    margin-top: 30px;
+  }
+  .booking-layout {
+    margin-top: 30px;
+  }
+  .fields {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .footer {
+    padding: 40px 20px 20px;
+  }
+  .footer-box {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+  .footer-form {
+    grid-template-columns: 1fr;
+  }
+  .footer-nav ul {
+    padding-left: 0;
+  }
+}
